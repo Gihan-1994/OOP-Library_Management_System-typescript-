@@ -1,0 +1,18 @@
+{
+  "name": "library_management_sytem",
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc",
+    "preview": "vite preview",
+    "start": "ts-node src/main.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.13",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  }
+}

@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Book {
+    -id: number
+    -title: string
+    -author: string
+    -ISBN: string
+    -isBorrowed: boolean
+    +constructor(id: number, title: string, author: string, ISBN: string)
+    +display(): void
+    +getTitle(): string
+    +getId(): number
+    +getIsBorrowed(): boolean
+    +markAsBorrowed(): void
+    +markAsReturned(): void
+}
+class User {
+    -name: string
+    -email: string
+    -borrowedBooks: Book[]
+    -static allUsers: User[]
+    -static userHistory: UserBorrows
+    +constructor(name: string, email: string)
+    +borrowBook(bookTitle: string): void
+    +returnBook(bookTitle: string): void
+    +manageLibrary(): void
+}
+interface UserBorrows {
+    borrowedUser: User[]
+    userBorrowedBooks: Book[]
+}
+class LibraryCatalogue {
+    -libraryItems: Book[]
+
+    +addItem(item: Book): void
+    +displayAllItems(): void
+    +displayAvailableItems() void
+    +getAvailableItems(): Book[]
+    + getBorrowedItems(): Book[]
+    +public findAvailableItemByTitle(title: string): Book | undefined
+}
+Book o-- LibraryCatalogue
+User --o Book : borrows
+User "0*"--"1" LibraryCatalogue : manages/borrows/returns
+UserBorrows <|.. User
+
+
+@enduml
