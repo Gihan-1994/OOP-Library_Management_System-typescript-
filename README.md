@@ -165,4 +165,4 @@ For any inquiries, please contact Nggp-1994
 
 ## UML Class Diagram
 
-![Library_Management_System.png](attachment:bb19ccf9-89bd-4b22-8161-7b1de6d08e6b:Library_Management_System.png)
+![Image](https://github.com/user-attachments/assets/884bcdf2-4e6f-497e-87ed-832d88b646d6)
